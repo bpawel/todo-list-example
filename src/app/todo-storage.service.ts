@@ -16,19 +16,16 @@ export class TodoStorageService {
   constructor() {
     this.todoList = JSON.parse(localStorage.getItem(storageName)) || defaultList;
   }
-
-  // get items
+ 
   get() {
     return [...this.todoList];
   }
 
-  // add a new item
   post(value) {
     this.todoList.push(value);     
     return this.update();
   }
 
-  // remove an item
   findOneAndRemove() {
     for(let i = 0 ;i <= this.todoList.length; i++) {    
       if (i == 0) {
