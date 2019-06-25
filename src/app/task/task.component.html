@@ -1,5 +1,5 @@
 <ng-template #content let-modal>
-        <div class="modal-header">
+        <div class="modal-header " style="text-align:center">
           <h4 class="modal-title" id="modal-basic-title">Add Task</h4>
           <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
             <span aria-hidden="true">&times;</span>
@@ -19,10 +19,10 @@
         </div>
     </ng-template>
     
-    <div class="mt-5">
+    <div class="mt-5" style="text-align:center">
         <button type="button" class="btn-lg btn-success mr-3" (click)="open(content)">Add task</button>
     
-        <button type="button" class="btn-lg btn-warning mr-3" (click)="removeTask(value)">Remove</button>
+        <button type="button" class="btn-lg btn-warning mr-3" (click)="removeTask()">Remove</button>
         
         <button type="button" class="btn-lg btn-danger" (click)="deleteAllTask()">Delete</button>
     </div>
@@ -30,7 +30,8 @@
     
     <div *ngFor="let task of taskList; let i = index" [attr.data-index]="i" class="card border-info mb-3 mt-3 offset-sm-5 col-sm-2">
         <div class="card-body">
-           <h4>Task number {{i+1}}</h4>
-           <h4>{{task}}</h4>
+          <h5>Task number {{i+1}}</h5>
+          <hr>
+          <p>{{task}}</p>
         </div>
     </div>

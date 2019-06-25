@@ -16,8 +16,8 @@ export class TodoService {
     return this.storage.post(value);
   }
 
-  removeTask(value) {
-    return this.storage.findOneAndRemove(value);
+  removeTask() {
+    return this.storage.findOneAndRemove();
   }
 
   deleteTask() {

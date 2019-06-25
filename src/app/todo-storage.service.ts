@@ -29,7 +29,7 @@ export class TodoStorageService {
   }
 
   // remove an item
-  findOneAndRemove(value) {
+  findOneAndRemove() {
     for(let i = 0 ;i <= this.todoList.length; i++) {    
       if (i == 0) {
         this.todoList.pop();    

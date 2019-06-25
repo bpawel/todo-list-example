@@ -33,7 +33,7 @@ export class TaskComponent implements OnInit {
   }
 
   removeTask(value) {   
-    this.taskList = this.todoService.removeTask(value);
+    this.taskList = this.todoService.removeTask();
   }
 
   deleteAllTask() {
