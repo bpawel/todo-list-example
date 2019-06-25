@@ -32,7 +32,7 @@ export class TaskComponent implements OnInit {
     this.taskList = this.todoService.addTask(value);
   }
 
-  removeTask(value) {   
+  removeTask() {   
     this.taskList = this.todoService.removeTask();
   }
 
